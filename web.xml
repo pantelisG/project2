@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    Version="2.4">
+    <servlet>
+        <servlet-name>exchan</servlet-name>
+        <servlet-class>com.example.web.exchanger</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>redir</servlet-name>
+        <servlet-class>com.example.web.erwtimatiko</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>code</servlet-name>
+        <servlet-class>com.example.web.thaymastiko</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>exchan</servlet-name>
+        <url-pattern>/Count.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>redir</servlet-name>
+        <url-pattern>/rdir.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>code</servlet-name>
+        <url-pattern>/tar.do</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+      <param-name>url</param-name>
+      <param-value>http://burn6.wordpress.com</param-value>
+    </context-param>
+    
+    <listener>
+      <listener-class>
+	com.example.web.MyListener
+      </listener-class>
+    </listener>
+    
+    
+</web-app>
